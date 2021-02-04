@@ -4,7 +4,7 @@ from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
 from rest_framework import status
  
-from restmigra.models import User
+from restmigra.models import Product
 from restmigra.serializers import RestmigraSerializer
 from rest_framework.decorators import api_view
 
@@ -12,7 +12,7 @@ from rest_framework.decorators import api_view
 @api_view(['GET', 'POST', 'DELETE'])
 def user_list(request):
     if request.method == 'GET':
-        tutorials = User.objects.all()
+        tutorials = Product.objects.all()
         
         title = request.GET.get('name', None)
         if title is not None:
