@@ -8,4 +8,4 @@ class Product(models.Model):
     stock = models.IntegerField(blank=False, default='')
     date_update = models.CharField(max_length=100,blank=False, default='')
     user_update = models.CharField(max_length=70,blank=False, default='')
-    observation = models.CharField(max_length=200,blank=False, default='')
+    observation = models.CharField(max_length=200,blank=False, default='') 
