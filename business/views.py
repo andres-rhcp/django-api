@@ -1,0 +1,4 @@
+from rest_framework.views import APIView
+from rest_framework.response import Responseclass HelloWorld(APIView):
+    def get(self, request):
+        return Response('HELLO WORLD! from Django.')
